@@ -117,6 +117,13 @@
         \vskip0pt%
     }
     \makeatother
-
+\makeatletter
+\AtBeginPart{%
+\begin{frame}[allowframebreaks]
+\partpage \tableofcontents[]
+\end{frame}
+\addtocontents{toc}{\protect\beamer@partintoc{\the\c@part}{\beamer@partnameshort}{\the\c@page}}%
+}
+\makeatother
 \AtBeginSection{\frame{\sectionpage}}
 \AtBeginSubsection{\frame{\subsectionpage}}
