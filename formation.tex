@@ -563,6 +563,49 @@ Nella condizione limite l'instabilit\'a riguarda una lunghezza d'onda, allontana
 
 \end{wordonframe}
 
+\section{Disco di accrescimento: gas e polvere.}\linkdest{accretion}
+
+\subsection{}
+
+\begin{frame}{Different drag regimes for different particles size}
+\begin{itemize}
+\item Dust (submicron-cm): coupled to gas with slow vertical-radial drift. Growth through collisions.
+\item Rocks ($\approx\si{\meter}$): keplerian orbit plus aerodynamical drag
+\item Planetesimal $\geq\si{\kilo\meter}$: N-body problem involving primarily gravitational forces (and strength for smaller)
+\item $\approx\mearth$: coupled to disk through gravitational rather aerodynamic interactions.
+\item planetary cores: around $10\mearth$ transition from quasi-hydrostatic to rapid accretion regime.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Settling timescale}
+\begin{block}{laminar flow}
+\begin{columns}[T]\begin{column}{0.5\textwidth}
+\begin{align*}
+&F_D=-\frac{1}{2}C_D\pi a^2\rho v^2\\
+&t_{fric}=\frac{mv}{|F_D|}\\
+&t_{settle}=\frac{z}{|v_{settle}|}|_{z=h,a=\SI{1}{\astronomicalunit}}=\SI{2e-5}{\year}
+\end{align*}
+\end{column}\begin{column}{0.5\textwidth}
+\begin{align*}
+&t_{fric}(\SI{1}{\astronomicalunit};\rho=\SI{5e-10}{\gram\per\cubic\cm},\rho_d=\SI{3}{\gram\per\cubic\cm})=\SI{2.5}{\second}\\
+&t_{settle}|_{z=h,a=\SI{1}{\astronomicalunit}}=\SI{2e+5}{\year} 
+\end{align*}
+\end{column}\end{columns}
+\end{block}
+\begin{block}{Turbulent flow}
+\begin{columns}[T]\begin{column}{0.5\textwidth}
+\begin{align*}
+&t_{diffuse}=\frac{z^2}{D}\\
+&t_{diffuse}(h)=t_{settle}(h): D\geq\frac{\pi\sqrt{e}}{2}\frac{\rho_mah^2\Omega_K}{\Sigma}
+\end{align*}
+\end{column}\begin{column}{0.5\textwidth}\end{column}
+
+\end{columns}
+\end{block}
+\end{frame}
+
+
+
 \section{Disco primordiale e planetesimi: nschemi di formazione}\linkdest{sec:formationschemes}
 
 \subsection{Condizione di instabilit\'a}
