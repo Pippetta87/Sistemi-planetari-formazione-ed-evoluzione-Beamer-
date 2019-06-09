@@ -1,7 +1,6 @@
 %%%Usefull link
 %tikz-equations:
 %http://www.wekaleamstudios.co.uk/posts/creating-a-presentation-with-latex-beamer-equations-and-tikz/
-
 % There are many different themes available for Beamer. A comprehensive
 % list with examples is given here:
 % http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
@@ -49,10 +48,8 @@
 % If you have a file called "university-logo-filename.xxx", where xxx
 % is a graphic format that can be processed by latex or pdflatex,
 % resp., then you can add a logo as follows:
-
 % \pgfdeclareimage[height=0.5cm]{university-logo}{university-logo-filename}
 % \logo{\pgfuseimage{university-logo}}
-
 % Delete this, if you do not want the table of contents to pop up at
 % the beginning of each subsection:
 %\AtBeginPart[]
@@ -60,7 +57,6 @@
 %  \begin{frame}<beamer>{Outline}    %\tableofcontents[currentsection]
 %  \end{frame}
 %}
-
 %\AtBeginDocument{%
 %\addtolength\abovedisplayskip{-0.5\baselineskip}%
 %\addtolength\belowdisplayskip{-1\baselineskip}%
@@ -68,9 +64,11 @@
 %\addtolength\belowdisplayshortskip{-1\baselineskip}%
 %}
 
+\AtBeginSection{\frame{\sectionpage}}
+\AtBeginSubsection{\frame{\subsectionpage}}
 \makeatletter
 \AtBeginPart{%
-\frame{\partpage}
+\frame{\partpage}\tableofcontents[]
   \addtocontents{toc}{\protect\beamer@partintoc{\the\c@part}{\beamer@partnameshort}{\the\c@page}}%
 }
 %% number, shortname, page.
@@ -98,15 +96,15 @@
         \end{beamercolorbox}%
 
 \begin{beamercolorbox}[wd=.3\paperwidth,ht=4.5ex,dp=1ex,center]{author in head/foot}%refs Part 1
-            \hyperref[part:planetaryformation]{Formation}: \hyperref{sec:cloudscollapse}{Pstel}.
+            \hyperlink{planetaryformation}{Formation}:\hyperlink{cloudscollapse}{Pstel}.
         \end{beamercolorbox}%cloud collapse
         
 \begin{beamercolorbox}[wd=.3\paperwidth,ht=4.5ex,dp=1ex,center]{author in head/foot}%refs Part 1
-            \hyperlink{sec:protoplanetary}{Pplan}:\hyperlink{sec:stability}{Stability}.\hyperlink{sec:accretion}{accretion}:\hyperlink{sec:formationschemes}{Fschemes}-\hyperlink{sec:migration}{migr}-\hyperlink{sec:nizza}{Nizza}
+            \hyperlink{protoplanetary}{Pplan}:\hyperlink{stability}{Stability}.\hyperlink{accretion}{accretion}:\hyperlink{formationschemes}{Fschemes}-\hyperlink{migration}{migr}-\hyperlink{nizza}{Nizza}
         \end{beamercolorbox}%Formazione planetaria
 
  \begin{beamercolorbox}[wd=.35\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%refs Part 2
-            \hyperlink{part:evolution}{dynaevol}:\hyperlink{sec:mkperturb}{Perturb}.\hyperlink{sec:secular}{Secular}.\hyperlink{sec:resonancechaos}{ResChaos}.\hyperlink{sec:radiation}{Rad}.\hyperlink{sec:collisions}{Urti}
+            \hyperlink{evolution}{dynaevol}:\hyperlink{mkperturb}{Perturb}.\hyperlink{secular}{Secular}.\hyperlink{resonancechaos}{ResChaos}.\hyperlink{radiation}{Rad}.\hyperlink{collisions}{Urti}
         \end{beamercolorbox}% Problema Kepleriano: meccanica analitica
                
         \begin{beamercolorbox}[wd=.15\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
@@ -117,13 +115,3 @@
         \vskip0pt%
     }
     \makeatother
-\makeatletter
-\AtBeginPart{%
-\begin{frame}[allowframebreaks]
-\partpage \tableofcontents[]
-\end{frame}
-\addtocontents{toc}{\protect\beamer@partintoc{\the\c@part}{\beamer@partnameshort}{\the\c@page}}%
-}
-\makeatother
-\AtBeginSection{\frame{\sectionpage}}
-\AtBeginSubsection{\frame{\subsectionpage}}
