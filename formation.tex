@@ -579,13 +579,13 @@ Nella condizione limite l'instabilit\'a riguarda una lunghezza d'onda, allontana
 
 \begin{frame}{Settling timescale}
 \begin{block}{laminar flow}
-\begin{columns}[T]\begin{column}{0.5\textwidth}
+\begin{columns}[T]\begin{column}{0.4\textwidth}
 \begin{align*}
 &F_D=-\frac{1}{2}C_D\pi a^2\rho v^2\\
 &t_{fric}=\frac{mv}{|F_D|}\\
-&t_{settle}=\frac{z}{|v_{settle}|}|_{z=h,a=\SI{1}{\astronomicalunit}}=\SI{2e-5}{\year}
+&t_{settle}=\frac{z}{|v_{settle}|}
 \end{align*}
-\end{column}\begin{column}{0.5\textwidth}
+\end{column}\begin{column}{0.6\textwidth}
 \begin{align*}
 &t_{fric}(\SI{1}{\astronomicalunit};\rho=\SI{5e-10}{\gram\per\cubic\cm},\rho_d=\SI{3}{\gram\per\cubic\cm})=\SI{2.5}{\second}\\
 &t_{settle}|_{z=h,a=\SI{1}{\astronomicalunit}}=\SI{2e+5}{\year} 
@@ -599,7 +599,11 @@ Nella condizione limite l'instabilit\'a riguarda una lunghezza d'onda, allontana
 &t_{diffuse}(h)=t_{settle}(h): D\geq\frac{\pi\sqrt{e}}{2}\frac{\rho_mah^2\Omega_K}{\Sigma}
 \end{align*}
 \end{column}\begin{column}{0.5\textwidth}\end{column}
-
+\begin{align*}
+&D\approx\nu=\frac{\alpha c_s^2}{\Omega_K}\\
+&\alpha\geq\frac{\pi\sqrt{e}}{2}\frac{\rho_d a}{\Sigma}\\
+&\alpha_{a=1\si{\micro\meter}}\geq\num{e-5},\ \alpha_{a=1\si{\milli\meter}}\geq\num{e-2}
+\end{align*}
 \end{columns}
 \end{block}
 \end{frame}
